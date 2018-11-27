@@ -49,7 +49,7 @@ def get_car_info(detail_url):
 		html = etree.HTML(text,etree.HTMLParser())
 		data = {}
 		data['title'] = html.xpath('//span[@class="cd_m_h_tit"]/text()')[0]
-		data['register_time'] = html.xpath('//span[@class="cd_m_desc_key"][1]/text()')[0]
+		data['register_time'] = html.xpath('//span[@class="cd_m_desc_key"]/text()')[0]
 		data['miles'] = html.xpath('//a[@class="cd_m_desc_val"]/text()')[0]
 		data['city'] = '广州'
 		data['oil_mount'] = html.xpath('//li[contains(@class,"cd_m_desc_line")][4]/span[@class="cd_m_desc_val"]/text()')[0]
